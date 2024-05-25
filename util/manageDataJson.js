@@ -26,13 +26,13 @@ export const overwriteDataInStorage = (arr, collection) => {
       fs.writeFileSync('./data.json', JSON.stringify({
         ...data,
         products: arr
-      }))
+      }, null, 2))
       break;
     case 'orders':
       fs.writeFileSync('./data.json', JSON.stringify({
         ...data,
         orders: arr
-      }))
+      }, null, 2))
       break;
     default:
       throw new Error('Invalid collection name.')
