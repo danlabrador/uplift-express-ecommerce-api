@@ -43,7 +43,7 @@ export const overwriteDataInStorage = (arr, collection) => {
 /**
  * Resets the JSON data to its initial state.
  */
-exportconst resetJsonData = () => {
+export const resetJsonData = () => {
   fs.writeFileSync('./data.json', {
     "products": [
       {
