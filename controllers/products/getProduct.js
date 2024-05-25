@@ -11,6 +11,7 @@ const getProduct = (req, res) => {
         error: 'Bad Request',
         message: 'Product ID needs to be in UUID format.'
       })
+      return;
     }
 
     if (!requestedProduct) {
@@ -18,14 +19,13 @@ const getProduct = (req, res) => {
         error: 'Not Found',
         message: 'Product with the ID provided does not exist.'
       })
+      return;
     }
 
     res.status(200).send({
       message: "Product found.",
       data: requestedProduct
     })
-
-    return res.status(200).json(data.products);
   } catch {
     res.status(500).send({
       error: "Internal Server Error",
