@@ -1,6 +1,6 @@
 import { parseDataFromStorage } from '../../util/manageDataJson.js';
 
-const getProducts = (req, res) => {
+const getProducts = (_, res) => {
   try {
     const data = parseDataFromStorage();
 
