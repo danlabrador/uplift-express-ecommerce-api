@@ -12,7 +12,10 @@ const getProducts = (_, res) => {
       return;
     }
 
-    return res.status(200).json(data.products);
+    return res.status(200).json({
+      message: "List of products found.",
+      data: data.products
+    });
   } catch {
     res.status(500).send({
       error: "Internal Server Error",
